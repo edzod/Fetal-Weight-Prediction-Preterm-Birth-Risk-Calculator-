@@ -39,4 +39,28 @@ Fetal health risk prediction using ensemble-based machine learning approaches (K
 Article 6: 
 Accuracy in Fetal Weight Estimation by Ultrasound: Hiwale vs Hadlock (JOGI, 2025): Prospective comparison of two ultrasound formulas in a tertiary hospital (Indian population), reporting error patterns and concluding which formula is more accurate in their cohort.
 
-.
+
+In Model & Data:
+
+Synthetic Pregnancy Dataset (CSV):  
+A synthetic dataset containing 15,000 pregnancy and delivery-related records, generated according to the expected clinical parameters of the project. The dataset includes maternal characteristics, obstetric history, ultrasound-related features, delivery information, neonatal outcomes, and estimated fetal weight values.  
+This dataset is used for ETL development, data cleaning, validation, exploratory data analysis, distribution analysis, correlation analysis, and initial model testing before receiving the real clinical dataset.
+
+Important note:  
+The synthetic dataset is not intended for medical conclusions or clinical decision-making. It is used only for development, testing, and validation of the data pipeline and modeling workflow.
+
+Initial Model:  
+An initial machine learning model was added to the repository together with the dataset. The model is used as part of the proof-of-concept stage for fetal weight estimation improvement. Its purpose is to test the full workflow from data preparation to prediction output, and to prepare for future integration with the clinician-facing calculator.
+
+Current Workflow Supported by the Added Data and Model:
+1. Batch data extraction from CSV.
+2. Data cleaning and validation.
+3. Exploratory data analysis (EDA).
+4. Detection of missing values, invalid ranges, and logical contradictions.
+5. Distribution analysis of numerical, binary, and categorical features.
+6. Correlation and association analysis between features.
+7. Initial model training/testing.
+8. Preparation for future UI integration with FastAPI.
+
+Planned Integration:
+The trained model will later be connected to the project UI through the FastAPI backend. Clinicians will enter pregnancy and ultrasound-related parameters into the calculator, and the backend will use the saved model to return an improved fetal weight estimation, including correction direction and expected estimation error.
